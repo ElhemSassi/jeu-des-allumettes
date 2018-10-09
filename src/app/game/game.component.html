@@ -1,0 +1,23 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-12  titleGame">
+  			<h1>Un petit jeu d'allumettes</h1>
+  		</div>
+  	</div>
+  	<div class="row">
+		<div class="col-md-12 titleGame">
+  			<h3>Celui qui prend la dernière allumette gagne la partie !</h3>
+  		</div>
+  	</div>
+	<div class="row" style="text-align:center;">
+		<img *ngFor="let i of ' '.repeat(number).split('')" src="assets/img/allumette.jpg" width="30px">
+	</div>
+  	<div class="row" style="text-align:center">
+		<div class="col-md-6 titleGame">
+  			<h3>Combien prenez-vous d'allumettes ?</h3>
+  		</div>
+  		<div class="col-md-2" *ngFor="let choice of choices">
+			<button type="button" class="btn btn-primary" (click)="userPlay(choice)">{{choice}}</button>
+  		</div>
+  	</div>
+</div>
